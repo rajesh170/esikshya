@@ -29,31 +29,31 @@ class _StudentHomeScreenState extends State<StudentHomeScreen> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    _checkVersion();
+    // _checkVersion();
   }
 
-  void _checkVersion() async {
-    final newVersion = NewVersion(
-      // iOSId: 'com.google.Vespa',
-      androidId: 'com.snapchat.android',
-      // androidId: 'np.net.gaadibazaar',
-    );
-    var versionStatus = await newVersion.getVersionStatus();
-    print(versionStatus!.localVersion.toString());
-    print(versionStatus.releaseNotes.toString());
-    print(versionStatus.storeVersion.toString());
-    var localVersion = getExtendedVersionNumber(versionStatus.localVersion);
-    var storeVersion = getExtendedVersionNumber(versionStatus.storeVersion);
-    log(localVersion.toString());
-    log(storeVersion.toString());
+  // void _checkVersion() async {
+  //   final newVersion = NewVersion(
+  //     // iOSId: 'com.google.Vespa',
+  //     androidId: 'com.snapchat.android',
+  //     // androidId: 'np.net.gaadibazaar',
+  //   );
+  //   var versionStatus = await newVersion.getVersionStatus();
+  //   print(versionStatus!.localVersion.toString());
+  //   print(versionStatus.releaseNotes.toString());
+  //   print(versionStatus.storeVersion.toString());
+  //   var localVersion = getExtendedVersionNumber(versionStatus.localVersion);
+  //   var storeVersion = getExtendedVersionNumber(versionStatus.storeVersion);
+  //   log(localVersion.toString());
+  //   log(storeVersion.toString());
 
-    if (localVersion < storeVersion) {
-      newVersion.showUpdateDialog(
-        context: context,
-        versionStatus: versionStatus,
-      );
-    }
-  }
+  //   if (localVersion < storeVersion) {
+  //     newVersion.showUpdateDialog(
+  //       context: context,
+  //       versionStatus: versionStatus,
+  //     );
+  //   }
+  // }
 
   int getExtendedVersionNumber(String version) {
     // Note that if you want to support bigger version cells than 99,

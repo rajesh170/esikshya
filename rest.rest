@@ -37,7 +37,7 @@ POST http://localhost:9010/parent-login
 ### 
 // Add Parent name
 POST http://localhost:9010/add-parent-detail
-Authorization : Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjRjMTQzY2E3LTAwYTktNDQ1ZS1hYzM5LTkwYTAwYjJlZTAwMyIsInVzZXJuYW1lIjoiIiwicGFyZW50X2lkIjo0LCJpc3N1ZWRfYXQiOiIyMDIyLTA5LTAyVDE1OjI5OjA0LjgwMDUyNTM3OSswNTo0NSIsImV4cGlyZWRfYXQiOiIyMDMyLTEyLTA4VDE1OjI5OjA0LjgwMDUyNzc1MyswNTo0NSJ9.YQMb_N96M9Q7ll4pxr5D1kkWJTFHEJ8UNEQLvFfopGo
+Authorization : Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjQwZTdlZWE5LTY1M2QtNDNiMS1iYTZiLTM2ZTA5NGJhM2UzOCIsInVzZXJuYW1lIjoiTmlycGEgUmFqIEdpcmkiLCJwYXJlbnRfaWQiOjgsImlzc3VlZF9hdCI6IjIwMjItMDktMDVUMTY6Mzg6MTMuOTYzNDM2ODEyKzA1OjQ1IiwiZXhwaXJlZF9hdCI6IjIwMzItMTItMTFUMTY6Mzg6MTMuOTYzNDM5NjA2KzA1OjQ1In0.-ucBqKqP4YcSPMlS9zo9rnTLjIGa9YmmyFaWZJn2uek
 
 {
     "full_name":"Nirpa Giri"
@@ -46,10 +46,10 @@ Authorization : Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjRjMTQzY2E3
 ### 
 // Edit Parent Details
 PATCH http://localhost:9010/edit-parent-detail
-Authorization : Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjRjMTQzY2E3LTAwYTktNDQ1ZS1hYzM5LTkwYTAwYjJlZTAwMyIsInVzZXJuYW1lIjoiIiwicGFyZW50X2lkIjo0LCJpc3N1ZWRfYXQiOiIyMDIyLTA5LTAyVDE1OjI5OjA0LjgwMDUyNTM3OSswNTo0NSIsImV4cGlyZWRfYXQiOiIyMDMyLTEyLTA4VDE1OjI5OjA0LjgwMDUyNzc1MyswNTo0NSJ9.YQMb_N96M9Q7ll4pxr5D1kkWJTFHEJ8UNEQLvFfopGo
+Authorization : Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjQwZTdlZWE5LTY1M2QtNDNiMS1iYTZiLTM2ZTA5NGJhM2UzOCIsInVzZXJuYW1lIjoiTmlycGEgUmFqIEdpcmkiLCJwYXJlbnRfaWQiOjgsImlzc3VlZF9hdCI6IjIwMjItMDktMDVUMTY6Mzg6MTMuOTYzNDM2ODEyKzA1OjQ1IiwiZXhwaXJlZF9hdCI6IjIwMzItMTItMTFUMTY6Mzg6MTMuOTYzNDM5NjA2KzA1OjQ1In0.-ucBqKqP4YcSPMlS9zo9rnTLjIGa9YmmyFaWZJn2uek
 
 {
-    "full_name":"Nirpa Raj Mallick",
+    "full_name":"Nirpa Raj Giri",
     "address":"Dhangadhi"
 }
 
@@ -64,30 +64,35 @@ POST http://localhost:9010/parent-resend-code
 ###
 // Get Details of Children in Parent Profile 
 GET http://localhost:9010/children-details
-Authorization : Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImUwNzA4ZWUwLTVlZmYtNDM4My05YWJiLTVhZGY0MWYyYzg3MiIsInVzZXJuYW1lIjoiam9ja29sb2NrbyIsInBhcmVudF9pZCI6NTYsImlzc3VlZF9hdCI6IjIwMjEtMTItMjBUMDc6MzI6MDQuOTQ1OTc2MjY4WiIsImV4cGlyZWRfYXQiOiIyMDIxLTEyLTI0VDExOjMyOjA0Ljk0NTk3ODIxNVoifQ.igO2PGOGbSprQnF02hRsgnRWFiidB1Wh9PxmFj_2cxI
-
+Authorization : Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjQwZTdlZWE5LTY1M2QtNDNiMS1iYTZiLTM2ZTA5NGJhM2UzOCIsInVzZXJuYW1lIjoiTmlycGEgUmFqIEdpcmkiLCJwYXJlbnRfaWQiOjgsImlzc3VlZF9hdCI6IjIwMjItMDktMDVUMTY6Mzg6MTMuOTYzNDM2ODEyKzA1OjQ1IiwiZXhwaXJlZF9hdCI6IjIwMzItMTItMTFUMTY6Mzg6MTMuOTYzNDM5NjA2KzA1OjQ1In0.-ucBqKqP4YcSPMlS9zo9rnTLjIGa9YmmyFaWZJn2uek
 
 ###
 //Get parent Details 
 GET http://localhost:9010/parent-detail
-
-###
-//Get child Details 
-GET http://localhost:9010/child-detail
+Authorization : Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjQwZTdlZWE5LTY1M2QtNDNiMS1iYTZiLTM2ZTA5NGJhM2UzOCIsInVzZXJuYW1lIjoiTmlycGEgUmFqIEdpcmkiLCJwYXJlbnRfaWQiOjgsImlzc3VlZF9hdCI6IjIwMjItMDktMDVUMTY6Mzg6MTMuOTYzNDM2ODEyKzA1OjQ1IiwiZXhwaXJlZF9hdCI6IjIwMzItMTItMTFUMTY6Mzg6MTMuOTYzNDM5NjA2KzA1OjQ1In0.-ucBqKqP4YcSPMlS9zo9rnTLjIGa9YmmyFaWZJn2uek
 
 ###
 //Create Child Details
 POST http://localhost:9010/add-child-detail
-Authorization : Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijk2ZmExOTVkLTk2ZTItNDY4Yy1hMzgzLWY1OTUzYmViZmE5MyIsInVzZXJuYW1lIjoiY2hvcmEiLCJwYXJlbnRfaWQiOjEsImlzc3VlZF9hdCI6IjIwMjEtMTItMTJUMDU6NTI6MjIuODM0MzE3MDY4WiIsImV4cGlyZWRfYXQiOiIyMDIxLTEyLTE2VDA5OjUyOjIyLjgzNDMxODU5NloifQ.jijyRMSiJH8nsqxG1qig7AR_Y7W1A0jIcJsRLMsBWAI
+Authorization : Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjIyZTc2MzdkLThjN2QtNDUzZC1hZDEwLWYyZTdmMGZlNzE5NyIsInVzZXJuYW1lIjoicmFqMDcwNyIsInBhcmVudF9pZCI6MSwiaXNzdWVkX2F0IjoiMjAyMi0wOS0wNVQxNjo0Mzo0Mi45MTIyMjk4OSswNTo0NSIsImV4cGlyZWRfYXQiOiIyMDMyLTEyLTExVDE2OjQzOjQyLjkxMjIzMjc1MyswNTo0NSJ9.d19WJTGNBzv4UtujwtYp8okl5agdccOUbTpU-Qo0qAY
 
 {
-    "full_name":"Mero Chora",
-	"date_of_birth":"2021-12-11",
+    "full_name":"Rajesh Giri",
+	"date_of_birth":"1996-12-11",
 	"gender":"Male",
-    "school" :"Nandi",
+    "school" :"Aristo",
 	"country" :"Nepal",
-	"state" :"state2"
+	"state" :"state 7",
+    "grade":5
 }
+
+###
+//Get child Details 
+GET http://localhost:9010/child-detail
+Authorization : Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjQwZTdlZWE5LTY1M2QtNDNiMS1iYTZiLTM2ZTA5NGJhM2UzOCIsInVzZXJuYW1lIjoiTmlycGEgUmFqIEdpcmkiLCJwYXJlbnRfaWQiOjgsImlzc3VlZF9hdCI6IjIwMjItMDktMDVUMTY6Mzg6MTMuOTYzNDM2ODEyKzA1OjQ1IiwiZXhwaXJlZF9hdCI6IjIwMzItMTItMTFUMTY6Mzg6MTMuOTYzNDM5NjA2KzA1OjQ1In0.-ucBqKqP4YcSPMlS9zo9rnTLjIGa9YmmyFaWZJn2uek
+
+
+
 
 ###
 //Update Child Details
@@ -118,8 +123,8 @@ Authorization : Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImMyYzNkYWFi
 POST http://localhost:9010/child-login
 
 {
-    "username":"chora",
-    "password":"nanditech"
+    "username":"raj0707",
+    "password":"er.rajesh"
 }
 
 
@@ -191,7 +196,7 @@ Authorization : Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjdiZjdhYjEx
 
 // add video
 ###
-POST http://localhost:9010/video/add
+POST http://localhost:9010/admin/videos/add
 
 
 {    "grade":6,

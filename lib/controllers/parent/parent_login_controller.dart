@@ -35,8 +35,8 @@ class ParentLoginController extends GetxController {
             ));
       } else {
         await _sharePref.saveParentDetails(_response);
-        var _fcmToken = await _sharePref.getFCMToken();
-        await _networkCalls.sendParentFCMToken(_fcmToken.toString());
+        // var _fcmToken = await _sharePref.getFCMToken();
+        // await _networkCalls.sendParentFCMToken(_fcmToken.toString());
         await _sharePref.setUserWelcomed();
         Navigator.pop(context);
         Get.off(() => const ParentAskNameScreen());

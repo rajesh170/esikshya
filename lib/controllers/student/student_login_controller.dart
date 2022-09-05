@@ -32,8 +32,8 @@ class StudentLoginController extends GetxController {
 
       if (_response.childDetails!.grade != 0) {
         await _sharedPref.saveStudentDetails(_response);
-        var _fcmToken = await _sharedPref.getFCMToken();
-        await _networkCalls.sendChildFCMToken(_fcmToken.toString());
+        // var _fcmToken = await _sharedPref.getFCMToken();
+        // await _networkCalls.sendChildFCMToken(_fcmToken.toString());
         await _sharedPref.setUserWelcomed();
         ChildrenDetailsResponse _childDetailResponse = ChildrenDetailsResponse(
           childId: int.parse(_response.childDetails!.childId.toString()),
@@ -56,8 +56,8 @@ class StudentLoginController extends GetxController {
         );
       } else {
         await _sharedPref.saveStudentDetails(_response);
-        var _fcmToken = await _sharedPref.getFCMToken();
-        await _networkCalls.sendChildFCMToken(_fcmToken.toString());
+        // var _fcmToken = await _sharedPref.getFCMToken();
+        // await _networkCalls.sendChildFCMToken(_fcmToken.toString());
         await _sharedPref.setUserWelcomed();
         // AppRoutes.goToStudentTellUsMore();
         Get.to(() => StudentTellUsMore(

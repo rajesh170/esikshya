@@ -6,7 +6,7 @@ import 'package:esikshya/utils/app_exception.dart';
 
 class NetworkBase {
   final String _baseUrl =
-      "https://6eb0-2400-1a00-b050-9112-5c5f-6715-dd87-f3f6.ngrok.io/";
+      "https://499d-2400-1a00-b050-9112-9892-be0a-8e99-5c0b.ngrok.io/";
 
   final Map<String, String> _headers = {
     'Content-Type': 'application/json',

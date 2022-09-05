@@ -128,9 +128,9 @@ class StudentSignUpController extends GetxController {
               studentRegisterRequest.username) {
             await Get.find<AppSharedPreferences>()
                 .saveStudentDetails(_studentLoginResponse);
-            var _fcmToken =
-                await Get.find<AppSharedPreferences>().getFCMToken();
-            await _networkCalls.sendChildFCMToken(_fcmToken.toString());
+            // var _fcmToken =
+            //     await Get.find<AppSharedPreferences>().getFCMToken();
+            // await _networkCalls.sendChildFCMToken(_fcmToken.toString());
             await Get.find<AppSharedPreferences>().setUserWelcomed();
             Get.to(() => StudentTellUsMore(
                 username: usernameController.text,

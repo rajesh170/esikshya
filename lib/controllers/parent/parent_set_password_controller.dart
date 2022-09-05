@@ -24,7 +24,7 @@ class ParentSetPasswordController extends GetxController {
       AppWidgets.showLoading(context);
       var parentSetPasswordRequest = ParentSetPasswordRequest(
         phone: phoneNumber,
-        password: confirmPassword.text,
+        password: password.text,
       );
       var _response =
           await _networkCalls.setPasswordParents(parentSetPasswordRequest);
@@ -33,8 +33,8 @@ class ParentSetPasswordController extends GetxController {
             phone: phoneNumber, password: confirmPassword.text);
         var _response = await _networkCalls.parentLogin(loginRequest);
         await _sharedPref.saveParentDetails(_response);
-        var _fcmToken = await _sharedPref.getFCMToken();
-        await _networkCalls.sendParentFCMToken(_fcmToken.toString());
+        // var _fcmToken = await _sharedPref.getFCMToken();
+        // await _networkCalls.sendParentFCMToken(_fcmToken.toString());
         Get.to(() => const ParentAskNameScreen());
       }
     } catch (e) {
