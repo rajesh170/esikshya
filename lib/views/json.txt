@@ -1,0 +1,110 @@
+type GameWithFriendsRequest struct {
+	OponentId int32  json:"oponent_id"
+	Subject   string json:"subject"
+	Status    string json:"status"
+	Grade     int32  json:"grade"
+}
+type ConnectionResponse struct {
+	ConnectionStatus string json:"connection_status"
+}
+type GameQuestionsResponse struct {
+	ID        int32  json:"id"
+	Questions string json:"questions"
+	OptionsA  string json:"options_a"
+	OptionsB  string json:"options_b"
+	OptionsC  string json:"options_c"
+	OptionsD  string json:"options_d"
+}
+type GameAnswerRequest struct {
+	CorrectAnswer string json:"correct_answer"
+}
+type CorrectResponse struct {
+	Message string json:"message"
+	Score   int32  json:"score"
+	Oscore  int32  json:"oscore"
+}
+type WrongResponse struct {
+	Message       string json:"message"
+	CorrectAnswer string json:"correct_answer"
+	Score         int32  json:"score"
+	Oscore        int32  json:"oscore"
+}
+type FinalResponse struct {
+	Message  string json:"message"
+	Score    int32  json:"score"
+	Oscore   int32  json:"oscore"
+	YourName string json:"your_name"
+	OPName   string json:"op_name"
+}
+type Errors struct {
+	Message    string json:"message"
+	Error      error  json:"error"
+	StatusCode int32  json:"status_code"
+}
+
+{
+    "type": "gameCompleted",
+    "message": "you scores more then Chora",
+    "score": 10,
+    "oscore": 0,
+    "your_name": "Cristiano Ronaldo",
+    "op_name": "Chora"
+}
+
+
+{
+    "type": "WrongAnswer",
+    "message": "worng",
+    "correct_answer": "a",
+    "score": 10,
+    "oscore": 0
+}
+
+{
+    "type": "questions",
+    "id": 10,
+    "questions": "The process of making food by green leaves?",
+    "options_a": "Photosynthesis ",
+    "options_b": "Metasismorpho",
+    "options_c": "Sismorphometa",
+    "options_d": "Poommertaissh"
+}
+
+{
+    "type": "CorrectAnswer",
+    "message": "correct",
+    "score": 10,
+    "oscore": 0
+}
+
+
+
+Success Response::: {"identifier":"SEFWR1ZeITZKXApXIRAgCQMzPBAhECk\/XyIBAhgAOw5HXCEWBycBPlI=",
+"environment":"ERYWAw==","merchantName":"JB0BBQ4aD0UqIThFJwAKBgAXEQ==",
+"userName":"XEtVQVlDW1VJVA==","balance":"UUZVRFBdWw==",
+"productName":"JB0BBQ4aD0UqIThFJwAKBgAXEQ==",
+"totalAmount":"VF1V",
+"message":{"technicalSuccessMessage":"Authenticated","successMessage":"Authenticated"},
+"charge":"VV1V","cashBack":"VV1V",
+"Cookie":"JSESSIONID=7FB8D8537EA939707ED43FD583A38583; Path=\/; HttpOnly;Secure"}
+
+
+
+
+
+
+{
+  "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImIxNzVjNWQyLTJmZjMtNDRmOC04N2FjLWJlM2MwNjVjMjNiMyIsInVzZXJuYW1lIjoiaXJvbm1hbiIsInBhcmVudF9pZCI6MjMsImlzc3VlZF9hdCI6IjIwMjItMDEtMjFUMDM6MjE6MjguNjc5MTE0NjI5WiIsImV4cGlyZWRfYXQiOiIyMDMyLTA0LTI4VDAzOjIxOjI4LjY3OTExNjA2OVoifQ.P-svmP-uWqa6dH4nGclRt48gXKAVpfJF4kyBn7rFhUQ",
+  "child_details": {
+    "child_id": 23,
+    "full_name": "IRONMAN",
+    "username": "ironman",
+    "date_of_birth": "2014-07-19",
+    "gender": "Male",
+    "grade": 5,
+    "school": "Marvel scholl",
+    "country": "Nepal",
+    "state": "Province 4",
+    "created_at": "2022-01-19T10:50:05Z"
+  }
+}
